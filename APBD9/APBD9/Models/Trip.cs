@@ -16,4 +16,7 @@ public partial class Trip
     public DateTime DateTo { get; set; }
 
     public int MaxPeople { get; set; }
+    public virtual ICollection<ClientTrip> ClientTrips { get; set; } = new List<ClientTrip>();
+
+    public virtual ICollection<Country> IdCountries { get; set; } = new List<Country>();
 }
